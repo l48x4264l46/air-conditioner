@@ -7,7 +7,7 @@ export default function Rc() {
   return (
     <div>
       <RemoteControl />
-      <Copyright />
+      {/* <Copyright /> */}
     </div>
   );
 }

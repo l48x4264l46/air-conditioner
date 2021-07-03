@@ -97,14 +97,7 @@ function AcLogo(props: any) {
   return (
     // <Box align="center" mt={12}>
     <Box textAlign="center" mt={12}>
-      <a
-        href={pkg.repository.url}
-        title={pkg.description}
-        target="_blank"
-        rel="noreferrer noopener"
-      >
         <img className={props.className} src={logo} alt="logo" />
-      </a>
     </Box>
   );
 }
@@ -243,14 +236,6 @@ function EnergyLabel(props: any) {
  */
 function EnergySavingLabel() {
   return (
-    <a
-      className="adsense-link"
-      href={adsenseLink}
-      target="_blank"
-      onClick={() => {
-        jumpToAdsense();
-      }}
-    >
       <div className="energy-saving-label">
         <div className="energy-saving-label_bg">
           <span className="energy-saving-label_title">
@@ -273,7 +258,6 @@ function EnergySavingLabel() {
           </span>
         </div>
       </div>
-    </a>
   );
 }
 
@@ -320,7 +304,7 @@ export default function AirConditioner(props: {
         <AirOutlet />
         <AcStatus status={props.status} />
         <EnergyLabel className={classes.energyLabel} titleLength={6} />
-        {process.env.REACT_APP_DISABLE_ADSENSE ? null : <EnergySavingLabel />}
+        <EnergySavingLabel />
       </AcBorder>
       <Fade in={props.status} timeout={{ enter: 2500, exit: 1500 }}>
         <WindEffect />

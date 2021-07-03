@@ -69,7 +69,6 @@ function Home() {
             </Box>
           </div>
           <RemoteControl />
-          <Copyright />
         </Box>
         <Toast />
       </Container>
